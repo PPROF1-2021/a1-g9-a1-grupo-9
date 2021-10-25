@@ -1,0 +1,116 @@
+/* Navbar general */
+
+.navbar-brand:hover{
+    border-bottom: 2px solid rgb(23, 102, 219);
+}
+#buscar-button:hover{
+    background-color:rgb(23, 102, 219);
+}
+
+/* Curso */
+
+#navbar {
+    position: fixed;
+    top: 50px;
+    right: 0px;
+    width: 400px;
+    display: grid;
+    text-align: center;
+  }
+
+#navbar li{
+    list-style: none;
+  } 
+
+#navbar a {
+      display: block;
+      padding: 20px 30px;
+      color: #4d4e53;
+      cursor: pointer;
+      border-bottom: 2px solid rgb(23, 102, 219);
+      text-decoration: none;
+    }
+    
+#text,
+#video{
+    width: 1200px;
+    margin-left: 10rem;
+    padding-bottom: 5rem;
+    }
+
+/* Login */
+
+#container-login{
+  width: 500px;
+  margin-bottom: 20rem;
+  margin-top: 5rem;
+  border: 2px solid;
+  border-image: linear-gradient(200deg, rgb(23, 102, 219), rgba(60,74,83,.25)) 1;
+}
+#registro{
+  text-align: center;
+}
+
+/* Registro */
+
+#container-registro{
+  width: 500px;
+  margin-bottom: 20rem;
+  margin-top: 5rem;
+  border: 2px solid;
+  border-image: linear-gradient(250deg, rgb(23, 102, 219), rgba(60,74,83,.25)) 1;
+}
+#form-group-button{
+  padding-top: 1rem;
+  text-align: center;
+}
+
+/*Resultados */
+
+#inputSearch{
+  outline: 0;
+  width: 250px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+#box-search{
+  position: fixed;
+  top: 65px;
+  margin-left: 21px;
+  width: 248px;
+  background-color: white;
+  /*z-index: 8;*/
+  display: none;
+}
+#box-search li a{
+  display: block;
+  /*width: 200px;*/
+  color: grey;
+  /*padding: 12px 20px;*/
+}
+
+/* Footer Section */
+#footer > ul, span{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1rem;
+    color: whitesmoke;
+}
+
+footer > ul > li {
+    padding: 0.5rem 0.8rem 0 0;
+    list-style: none;
+    color: whitesmoke;
+    text-decoration: none;
+  }
+
+footer > ul > li > a{
+    font-size: 1rem;
+    color: whitesmoke;
+    text-decoration: none;
+  }
+
+footer{
+    background-color: rgb(16, 75, 163);
+}

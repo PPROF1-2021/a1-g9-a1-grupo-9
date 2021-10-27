@@ -146,6 +146,10 @@ footer > ul > li > a:hover {
   border-bottom: 2px solid whitesmoke;
 }
 
+.footlist li > a > img{
+    width: 2rem;
+    border-radius: 0.7rem;
+}
 
 /* Iconos Perfil */
 

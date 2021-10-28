@@ -163,11 +163,18 @@ footer > ul > li > a:hover {
   color: white;
 }
 
+#card {
+  margin: 10px;
+}
+#cards {
+  background-color: white;
+  padding: 10px;
+}
 .flex-container {
-  margin: 5%;
   display: flex;
-  padding: 15px;
+  padding: 30px;
   justify-content: space-between;
+  background-color: white;
 }
 
 #container-estudiante {

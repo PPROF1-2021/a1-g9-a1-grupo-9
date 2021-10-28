@@ -90,7 +90,7 @@
 
 /* Perfil */
 
-#container-perfil{
+#container-perfil {
   width: 950px;
   margin-left: 25rem;
   margin-bottom: 8rem;
@@ -107,7 +107,12 @@
   margin-top: 5rem;
   border: 2px solid;
   font-family: "Montserrat-Medium";
-  border-image: linear-gradient(230deg, rgb(23, 102, 219), rgba(60, 74, 83, 0.25)) 1;
+  border-image: linear-gradient(
+      230deg,
+      rgb(23, 102, 219),
+      rgba(60, 74, 83, 0.25)
+    )
+    1;
 }
 #form-group-button {
   padding-top: 1rem;
@@ -146,11 +151,31 @@ footer > ul > li > a:hover {
   border-bottom: 2px solid whitesmoke;
 }
 
-.footlist li > a > img{
-    width: 2rem;
-    border-radius: 0.7rem;
+.footlist li > a > img {
+  width: 2rem;
+  border-radius: 0.7rem;
 }
 
+/* index */
+
+#registro-button:hover {
+  background-color: rgb(16, 75, 163, 0.8);
+  color: white;
+}
+
+.flex-container {
+  margin: 5%;
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+}
+
+#container-estudiante {
+  max-width: 600px;
+}
+#container-instructor {
+  max-width: 600px;
+}
 /* Iconos Perfil */
 
 @font-face {

@@ -90,7 +90,159 @@
 
 /* Perfil */
 
-#container-perfil {
+.seccion-perfil-usuario .perfil-usuario-body,
+.seccion-perfil-usuario {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seccion-perfil-usuario .perfil-usuario-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(#738dff, transparent);
+    margin-bottom: 19px;
+}
+
+.seccion-perfil-usuario .perfil-usuario-portada {
+    display: block;
+    position: relative;
+    width: 90%;
+    height: 250px;
+    background: linear-gradient(45deg, #BC3CFF, #317FFF);
+    border-radius: 0 0 20px 20px;
+}
+
+.seccion-perfil-usuario .perfil-usuario-avatar {
+    display: flex;
+    width: 180px;
+    height: 180px;
+    align-items: center;
+    justify-content: center;
+    border: 7px solid #FFFFFF;
+    background-color: #DFE5F2;
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+    position: absolute;
+    bottom: -40px;
+    left: calc(50% - 90px);
+    z-index: 1;
+}
+
+.seccion-perfil-usuario .perfil-usuario-avatar img {
+    width: 100%;
+    position: relative;
+    border-radius: 50%;
+}
+
+.seccion-perfil-usuario .perfil-usuario-avatar .boton-avatar {
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    border: 0;
+    background-color: #fff;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.seccion-perfil-usuario .perfil-usuario-body {
+    width: 70%;
+    position: relative;
+    max-width: 750px;
+}
+
+.seccion-perfil-usuario .perfil-usuario-body .titulo {
+    display: block;
+    width: 100%;
+    font-size: 28px;
+    margin-bottom: 7.35px;
+}
+
+.seccion-perfil-usuario .perfil-usuario-body .texto {
+    color: #848484;
+    font-size: 15.4px;
+}
+
+.seccion-perfil-usuario .perfil-usuario-footer,
+.seccion-perfil-usuario .perfil-usuario-bio {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 25px 30px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+    background-color: #fff;
+    border-radius: 15px;
+    width: 100%;
+}
+
+.seccion-perfil-usuario .perfil-usuario-bio {
+    margin-bottom: 18.4px;
+    text-align: center;
+}
+
+.seccion-perfil-usuario .lista-datos {
+    width: 50%;
+    list-style: none;
+}
+
+.seccion-perfil-usuario .lista-datos li {
+    padding: 5px 0;
+}
+
+.seccion-perfil-usuario .lista-datos li>.icono {
+    margin-right: 14.7px;
+    font-size: 17.6px;
+    vertical-align: middle;
+}
+
+.seccion-perfil-usuario .botones {
+    position: absolute;
+    right: calc(0px - 50px - 1rem);
+    top: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.seccion-perfil-usuario .botones .boton-funciones {
+    border: 0;
+    background-color: #fff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #fff;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+    font-size: 1.3rem;
+}
+
+.seccion-perfil-usuario .botones .boton-funciones+.boton-funciones {
+    margin-top: 7.35px;
+}
+
+.seccion-perfil-usuario .boton-funciones.a {
+    background-color: #5955FF;
+}
+
+.seccion-perfil-usuario .boton-funciones.b {
+    background-color: #35E1BF;
+}
+
+.seccion-perfil-usuario .boton-funciones.c {
+    background: linear-gradient(45deg, #FF2DFD, #40A7FF);
+}
+
+.icon{
+  width: 20px;
+}
+
+#container-perfil{
   width: 950px;
   margin-left: 25rem;
   margin-bottom: 8rem;
@@ -182,57 +334,4 @@ footer > ul > li > a:hover {
 }
 #container-instructor {
   max-width: 600px;
-}
-/* Iconos Perfil */
-
-@font-face {
-  font-family: "icomoon";
-  src: url("../css/fonts/icomoon.eot");
-  src: url("../css/fonts/icomoon.eot") format("embedded-opentype"),
-    url("../css/fonts/icomoon.ttf?l9fax2") format("truetype"),
-    url("../css/fonts/icomoon.woff?l9fax2") format("woff"),
-    url("../css/fonts/icomoon.svg?l9fax2#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-
-[class^="icon-"],
-[class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icomoon" !important;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-frame_gallery_image_images_photo_picture_pictures_icon_123209:before {
-  content: "\e907";
-}
-.icon-university_cap_icon-iconscom_66109:before {
-  content: "\e900";
-}
-.icon-globe_106381:before {
-  content: "\e901";
-}
-.icon-calendar-with-spring-binder-and-date-blocks_icon-iconscom_73645:before {
-  content: "\e902";
-}
-.icon-gender_male_female_icon_138539:before {
-  content: "\e903";
-}
-.icon-contact_96967:before {
-  content: "\e904";
-}
-.icon-mail-black-envelope-symbol_icon-iconscom_56519:before {
-  content: "\e905";
-}
-.icon-person_110935:before {
-  content: "\e906";
 }

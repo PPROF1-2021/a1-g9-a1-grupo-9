@@ -5,167 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
   <title>Perfil</title>   
 </head>
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <body class="d-flex flex-column min-vh-100" id="body">
-
- <style type="text/css">
-
-.seccion-perfil-usuario .perfil-usuario-body,
-.seccion-perfil-usuario {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-}
-
-.seccion-perfil-usuario .perfil-usuario-header {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background: linear-gradient(#738dff, transparent);
-    margin-bottom: 19px;
-}
-
-.seccion-perfil-usuario .perfil-usuario-portada {
-    display: block;
-    position: relative;
-    width: 90%;
-    height: 250px;
-    background: linear-gradient(45deg, #BC3CFF, #317FFF);
-    border-radius: 0 0 20px 20px;
-}
-
-.seccion-perfil-usuario .perfil-usuario-avatar {
-    display: flex;
-    width: 180px;
-    height: 180px;
-    align-items: center;
-    justify-content: center;
-    border: 7px solid #FFFFFF;
-    background-color: #DFE5F2;
-    border-radius: 50%;
-    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
-    position: absolute;
-    bottom: -40px;
-    left: calc(50% - 90px);
-    z-index: 1;
-}
-
-.seccion-perfil-usuario .perfil-usuario-avatar img {
-    width: 100%;
-    position: relative;
-    border-radius: 50%;
-}
-
-.seccion-perfil-usuario .perfil-usuario-avatar .boton-avatar {
-    position: absolute;
-    left: -2px;
-    top: -2px;
-    border: 0;
-    background-color: #fff;
-    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.seccion-perfil-usuario .perfil-usuario-body {
-    width: 70%;
-    position: relative;
-    max-width: 750px;
-}
-
-.seccion-perfil-usuario .perfil-usuario-body .titulo {
-    display: block;
-    width: 100%;
-    font-size: 28px;
-    margin-bottom: 7.35px;
-}
-
-.seccion-perfil-usuario .perfil-usuario-body .texto {
-    color: #848484;
-    font-size: 15.4px;
-}
-
-.seccion-perfil-usuario .perfil-usuario-footer,
-.seccion-perfil-usuario .perfil-usuario-bio {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 25px 30px;
-    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
-    background-color: #fff;
-    border-radius: 15px;
-    width: 100%;
-}
-
-.seccion-perfil-usuario .perfil-usuario-bio {
-    margin-bottom: 18.4px;
-    text-align: center;
-}
-
-.seccion-perfil-usuario .lista-datos {
-    width: 50%;
-    list-style: none;
-}
-
-.seccion-perfil-usuario .lista-datos li {
-    padding: 5px 0;
-}
-
-.seccion-perfil-usuario .lista-datos li>.icono {
-    margin-right: 14.7px;
-    font-size: 17.6px;
-    vertical-align: middle;
-}
-
-.seccion-perfil-usuario .botones {
-    position: absolute;
-    right: calc(0px - 50px - 1rem);
-    top: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.seccion-perfil-usuario .botones .boton-funciones {
-    border: 0;
-    background-color: #fff;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    color: #fff;
-    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
-    font-size: 1.3rem;
-}
-
-.seccion-perfil-usuario .botones .boton-funciones+.boton-funciones {
-    margin-top: 7.35px;
-}
-
-.seccion-perfil-usuario .boton-funciones.a {
-    background-color: #5955FF;
-}
-
-.seccion-perfil-usuario .boton-funciones.b {
-    background-color: #35E1BF;
-}
-
-.seccion-perfil-usuario .boton-funciones.c {
-    background: linear-gradient(45deg, #FF2DFD, #40A7FF);
-}
-</style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <header id="header">
     <nav class="navbar navbar-light" id="navbar-general">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html"><img src="https://img.icons8.com/wired/64/000000/students.png"/>Plataforma Educativa</a>
+        <a class="navbar-brand" href="index.html"><img src="https://img.icons8.com/wired/64/000000/students.png" />Plataforma Educativa</a>
         <a class="navbar-brand" href="login.html">Iniciar Sesion</a>
         <a class="navbar-brand" href="registro.html">Registrarse</a>
         <a class="navbar-brand" href="perfil.html">Perfil</a>
@@ -186,7 +36,6 @@
                         <i><span class="icon-frame_gallery_image_images_photo_picture_pictures_icon_123209"></span></span> </i>
                     </button>
                 </div>
-                
             </div>
         </div>
         <div class="perfil-usuario-body">
@@ -197,16 +46,16 @@
             </div>
             <div class="perfil-usuario-footer" id="perfil-footer">
                 <ul class="lista-datos">
-                    <li><i class="fas fa-user" id="icon"></i> Nombre:</li>
-                    <li><i class="fas fa-user"></i> Apellido:</li>
-                    <li><i class="fas fa-at"></i> Correo electrónico:</li>
-                    <li><i class="fas fa-id-card"></i> N° de documento:</li>
+                    <li><img class="icon" src="iconos/user.svg"></img> Nombre:</li>
+                    <li><img class="icon" src="iconos/user.svg"></img> Apellido:</li>
+                    <li><img class="icon" src="iconos/at.svg"></img> Correo electrónico:</li>
+                    <li><img class="icon" src="iconos/card.svg"></img> N° de documento:</li>
                 </ul>
                 <ul class="lista-datos">
-                    <li><i class="fas fa-venus-mars"></i> Género:</li>
-                    <li><i class="far fa-calendar-alt"></i> Fecha de nacimiento:</li>
-                    <li><i class="fas fa-graduation-cap"></i> Rol:</li>
-                    <li><i class="fas fa-globe-americas"></i> País:</li>
+                    <li><img class="icon" src="iconos/gender.svg"></img> Género:</li>
+                    <li><img class="icon" src="iconos/calendar.svg"></img> Fecha de nacimiento:</li>
+                    <li><img class="icon" src="iconos/cap.svg"></img> Rol:</li>
+                    <li><img class="icon" src="iconos/globe.svg"></img> País:</li>
                 </ul>
     
             </div>
@@ -219,23 +68,23 @@
     </section>
     <footer class="mt-auto" id="footer">
         <ul class="footlist">
-            <li><a href="https://www.linkedin.com" target="_blank"><img
+            <li><a href="https://www.linkedin.com"><img
                 class="link"
                 src="img/icono-linkedin.jpeg"
               ></img></a></li>
-            <li><a href="https://www.facebook.com" target="_blank">
+            <li><a href="https://www.facebook.com">
                 <img
                   class="link"
                   src="img/icon-facebook.jpeg"
                 ></img></a></li>
-            <li><a href="https://www.instagram.com" target="_blank">
+            <li><a href="https://www.instagram.com">
                     <img
                       class="link"
                       src="img/icon-instagram.jpeg"
                     ></img></a></li>    
           <li><a href="#">Privacidad</a></li>
           <li><a href="#">Terminos y condiciones</a></li>    
-          <li><a href="contacto.html" target="_blank">Contactanos</a></li>
+          <li><a href="Contacto.html" target="_blank">Contactanos</a></li>
         </ul>
         <span class="navbar-text navbar-left">
           >Copyright 2021, Todos los derechos reservados | Plataforma grupo9 ISPC

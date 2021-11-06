@@ -259,12 +259,7 @@
   margin-top: 5rem;
   border: 2px solid;
   font-family: "Montserrat-Medium";
-  border-image: linear-gradient(
-      230deg,
-      rgb(23, 102, 219),
-      rgba(60, 74, 83, 0.25)
-    )
-    1;
+  border-image: linear-gradient(230deg, rgb(23, 102, 219), rgba(60, 74, 83, 0.25)) 1;
 }
 #form-group-button {
   padding-top: 1rem;
@@ -303,9 +298,9 @@ footer > ul > li > a:hover {
   border-bottom: 2px solid whitesmoke;
 }
 
-.footlist li > a > img {
-  width: 2rem;
-  border-radius: 0.7rem;
+.footlist li > a > img{
+    width: 2rem;
+    border-radius: 0.7rem;
 }
 
 /* index */

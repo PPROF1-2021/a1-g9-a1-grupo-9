@@ -10,6 +10,10 @@
   opacity: 4;
 }
 
+.nav-container {
+  display: flex;
+}
+
 #navbar-general > div > a,
 #buscar-button {
   color: whitesmoke;
@@ -69,7 +73,7 @@
 }
 
 #container-login {
-  width: 600px;
+  width: 500px;
   padding: 2rem 3rem;
   background-color: white;
   margin-bottom: 20rem;
@@ -319,6 +323,7 @@ footer > ul > li > a:hover {
 }
 .flex-container {
   display: flex;
+  flex-wrap: wrap;
   padding: 30px;
   justify-content: space-between;
   background-color: white;

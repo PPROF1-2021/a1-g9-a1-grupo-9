@@ -17,35 +17,30 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link
       rel="shortcut icon"
-      href="https://img.icons8.com/wired/64/000000/students.png"
+      href="img/students.png"
       type="image/x-icon"
     />
     <title>Plataforma Educativa</title>
   </head>
   <body class="d-flex flex-column min-vh-100" id="body"> 
-    <header>
+    <header id="header">
       <nav class="navbar navbar-light" id="navbar-general">
-        <div class="container-fluid">
+        <div class="container-fluid" id="nav-container">
           <a class="navbar-brand" href="index.html"
-            ><img src="https://img.icons8.com/wired/64/000000/students.png" />
-            Plataforma Educativa</a>
+          ><img src="https://img.icons8.com/wired/64/000000/students.png" />
+          Plataforma Educativa</a>
           <a class="navbar-brand" href="login.html">Iniciar Sesion</a>
           <a class="navbar-brand" href="registro.html">Registrarse</a>
           <a class="navbar-brand" href="perfil.html">Perfil</a>
           <form class="d-flex">
-            <input
-              type="search"
-              class="form-control me-2"
-              placeholder="Buscar"
-              aria-label="Search"
-            />
-            <a href="resultados.html"></a>
-            <button class="btn btn-outline-dark" id="buscar-button">
-              Buscar
-            </button>
+              <input type="search" class="form-control me-2"
+                placeholder="Buscar" aria-label="Search">
+              <a href="resultados.html" target="_blank"></a>
+              <button class="btn btn-outline-success" id="buscar-button">Buscar</button>
           </form>
         </div>
       </nav>
+
     </header>
 
     <section>
@@ -168,7 +163,7 @@
               ></img></a></li>
         <li><a href="#">Privacidad</a></li>
         <li><a href="#">Terminos y condiciones</a></li>
-        <li><a href="#">Contactanos</a></li>
+        <li><a href="contacto.html">Contactanos</a></li>
       </ul>
       <span class="navbar-text navbar-left" id="span">
         >Copyright 2021, Todos los derechos reservados | Plataforma grupo9 ISPC

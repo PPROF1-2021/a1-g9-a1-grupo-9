@@ -31,17 +31,17 @@
 </header>   
   <div class="container" id="container-registro"><br>
     <h2>Crear una cuenta</h2> <br>
-    <form class="form-inline needs-validation" role="form" id="form" novalidate>
+    <form class="form-inline needs-validation" role="form" id="form" method="post" action="js\aa.js" novalidate>
       <div class="form-group" id="form-group-Nombre">
         <label for="name">Nombre*</label>
-        <input id="name" class="form-control" type="text" required>
+        <input id="name" class="form-control" type="text"  minlength="2" required>
         <div class="invalid-feedback">
           Ingresar Nombre!!
         </div>
      </div><br>
       <div class="form-group" id="form-group-Apellido">
          <label for="lastname">Apellido*</label>
-         <input id="lastname" class="form-control" type="text" required>
+         <input id="lastname" class="form-control" type="text"  minlength="2" required>
          <div class="invalid-feedback">
           Ingresar Apellido!!
         </div>
@@ -123,40 +123,32 @@
   </div><br>
   <div class="form-inline" role="form" id="form-Fecha">
     <label for="date">Fecha de Nacimiento* </label>
-    <select class="form-group form-control-sm" size="1" aria-label=".form-select-1" required>
+    <select class="form-group form-control-sm" size="1" id="dia" aria-label=".form-select-1">
       <option selected disabled value="">Dia</option>
       <option value="1">01</option>
-      <option value="2">10</option>
-      <option value="3">20</option>
-      <option value="4">30</option>
+      <option value="10">10</option>
+      <option value="20">20</option>
+      <option value="30">30</option>
     </select>
-    <div class="invalid-feedback form-inline">
-      Seleccionar Dia
-    </div>
-    <select class="form-group form-control-sm" size="1" aria-label=".form-select-1" required>
+
+    <select class="form-group form-control-sm" id="mes" size="1" aria-label=".form-select-1">
       <option selected disabled value="">Mes</option>
       <option value="1">Enero</option>
       <option value="2">Febrero</option>
       <option value="3">Marzo</option>
       <option value="4">Abril</option>
     </select>
-    <div class="invalid-feedback form-inline">
-      Seleccionar Mes
-    </div>
-    <select class="form-group form-control-sm" size="1" aria-label=".form-select-1" required>
+    <select class="form-group form-control-sm" size="1" id="año" aria-label=".form-select-1">
       <option selected disabled value="">Año</option>
-      <option value="1">2000</option>
-      <option value="2">1990</option>
-      <option value="3">1980</option>
-      <option value="4">1970</option>
+      <option value="2000">2000</option>
+      <option value="1990">1990</option>
+      <option value="1980">1980</option>
+      <option value="1970">1970</option>
     </select>
-    <div class="invalid-feedback form-inline">
-      Seleccionar Año
-    </div>
-    <input size="16" type="text" class="form-control" id="datetime" readonly>
+   
   </div><br>
   <div class="form-group" id="form-group-button">
-         <button type="submit" class="btn btn-primary" id="registro- button">Crear</button><br>
+         <button type="submit" class="btn btn-primary" id="registro- button" onclick="permiso()">Crear</button><br>
   </div>
   </form>
 </div><br>

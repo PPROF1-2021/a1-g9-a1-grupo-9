@@ -255,8 +255,9 @@
 
 /* Registro */
 
-#container-registro {
+#container-registro,.contenedorDatos {
   width: 500px;
+  
   padding: 2rem 3rem;
   background-color: white;
   margin-bottom: 5rem;
@@ -359,3 +360,10 @@ footer > ul > li > a:hover {
   }
 }
 
+.borrar {
+    display:none;
+}
+
+.encabezado-datos {
+    font-size: 20px;
+}

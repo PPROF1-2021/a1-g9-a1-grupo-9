@@ -129,7 +129,6 @@ function validarRegistro(){
           event.stopPropagation()
         }else if(validar()==true){
           mostrarDatos(event)
-          alert("Usuario Registrado exitosamente")
         }
 
         form.classList.add('was-validated')
@@ -139,7 +138,9 @@ function validarRegistro(){
     return false;
 }
 
-function mostrarDatos(e){
+
+
+function mostrarDatos(){
 
 
   var className = "encabezado-datos";

@@ -27,24 +27,7 @@ function cargarDatosFechas(){
 
 
 
-function validarConJava(){
-  const nombre=document.getElementById("name").value;  
-  const apellido=document.getElementById("lastname").value;  
-  const email=document.getElementById("email").value;  
-  const pwd=document.getElementById("pwd").value;  
-  const pwd1=document.getElementById("pwd1").value;  
-  const pais=document.getElementById("pais").value; 
-  const prov=document.getElementById("provincia").value; 
-  const loc=document.getElementById("localidad").value; 
-  const doc=document.getElementById("doc").value; 
-  const pais=document.getElementById("pais").value;  
-  
-  if(nombre.length<=2){
-    swal.fire("Ingrese nombre valido")
-  };
-  return false;
 
-}
 
 
 

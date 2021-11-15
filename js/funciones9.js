@@ -128,6 +128,7 @@ function validarRegistro(){
           event.preventDefault()
           event.stopPropagation()
         }else if(validar()==true){
+         
           mostrarDatos(event)
         }
 
@@ -191,3 +192,11 @@ function validarLog(){
     })
 }
 
+function cambiarBoton(){
+  let bot=document.getElementById("registro- button");
+  bot.style.backgroundColor="red";
+}
+function cambiarBoton2(){
+  let bot=document.getElementById("registro- button");
+  bot.style.backgroundColor="blue";
+}

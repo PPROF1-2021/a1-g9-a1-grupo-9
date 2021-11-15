@@ -129,7 +129,6 @@ function validarRegistro(){
           event.stopPropagation()
         }else if(validar()==true){
           mostrarDatos(event)
-          alert("Usuario Registrado exitosamente")
         }
 
         form.classList.add('was-validated')
@@ -139,7 +138,9 @@ function validarRegistro(){
     return false;
 }
 
-function mostrarDatos(e){
+
+
+function mostrarDatos(){
 
 
   var className = "encabezado-datos";
@@ -169,4 +170,24 @@ function mostrarDatos(e){
 
 }
 
+
+function validarLog(){
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+}
 

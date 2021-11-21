@@ -31,9 +31,7 @@
 
 			header("Location: ../errorregistro.html");
 		}else{
-			echo "<script>
-				console.log(".$fechanac . ");
-			</script>";
+	
 			
 			$sqlusuario="INSERT INTO usuarios(Nombre, Apellido, Email, Password, CodigoLocalidad, Dni, Sexo, FechaNacimiento, Capacita) 
 			VALUES ('$nombre', '$apellido','$correo','$password_encriptada',$codigolocalidad,$dni,'$sexo','$fechanac', 0)";

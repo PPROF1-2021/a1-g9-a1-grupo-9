@@ -14,22 +14,27 @@
 		$dni=$_POST['dni'];
 
 		$sexo=mysqli_real_escape_string($conexion,$_POST['sexo']);
-		$dia=$_POST['dia'];
-		$mes=$_POST['mes'];
-		$año=$_POST['año'];
+		//$fechanac=$_POST['date'];
+		
+		$dia=$_POST['dia'];//j   1 al 31
+		$mes=$_POST['mes'];//n   1 al 12
+		$año=$_POST['año'];// Y	
 		$fechanac=date("Y-m-d",mktime(0, 0, 0, $mes, $dia, $año));
-
+		//$fechanac=create_date(date("Y-m-d",mktime(0, 0, 0, $mes, $dia, $año)));
+		//echo "<script> console.log(". DATE("Y",$fechanac).")</script>";
 		$sqluser="SELECT Codigo FROM usuarios WHERE dni=$dni or Email='$correo'";
 
 		$resultadouser=$conexion->query($sqluser);
 		$filas=$resultadouser->num_rows;
 
 		if($filas>0){
-			echo "<script>
-					alert('No se puede dar de alta al Usuario.Ya existe mail o DNI para otro usuario');
-					window.location='../registro.html';
-				</script>";
+
+			header("Location: ../errorregistro.html");
 		}else{
+			echo "<script>
+				console.log(".$fechanac . ");
+			</script>";
+			
 			$sqlusuario="INSERT INTO usuarios(Nombre, Apellido, Email, Password, CodigoLocalidad, Dni, Sexo, FechaNacimiento, Capacita) 
 			VALUES ('$nombre', '$apellido','$correo','$password_encriptada',$codigolocalidad,$dni,'$sexo','$fechanac', 0)";
 			

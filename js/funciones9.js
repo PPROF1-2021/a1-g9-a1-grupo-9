@@ -49,11 +49,6 @@ function cargarDatosFechas(){
 }
 
 
-
-
-
-
-
 function cargarMeses(){
   var array = ["Enero", "Febrero", "Marzo", "Abril", "Mayo","Junio","Julio","Agosto","Septiembre", "Octubre","Noviembre","Diciembre"];
   select=document.getElementById("mes");

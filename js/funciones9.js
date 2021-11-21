@@ -1,3 +1,26 @@
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+
+
+
 
 
 function calcularEdad() {
@@ -24,11 +47,6 @@ function cargarDatosFechas(){
   cargarDias();
   cargarAños();
 }
-
-
-
-
-
 
 
 function cargarMeses(){
@@ -114,7 +132,7 @@ function validar(){
 
 
 
-
+/*
 function validarRegistro(){
   'use strict'
 
@@ -138,7 +156,7 @@ function validarRegistro(){
 
     return false;
 }
-
+*/
 
 
 function mostrarDatos(){
@@ -171,7 +189,13 @@ function mostrarDatos(){
 
 }
 
+function redireccionar(pagina){
+  setTimeout(function redirect(){
+    window.location.href=pagina, false;
+  }, 4500);
+}
 
+/*
 function validarLog(){
   'use strict'
 
@@ -191,7 +215,7 @@ function validarLog(){
       }, false)
     })
 }
-
+*/
 function cambiarBoton(){
   let bot=document.getElementById("registro- button");
   bot.style.backgroundColor="red";

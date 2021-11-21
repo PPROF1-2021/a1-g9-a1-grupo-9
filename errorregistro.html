@@ -11,45 +11,39 @@
     href="img/students.png"
     type="image/x-icon"
   />
-    <title>Contactanos</title>
+    <title>Login</title>
   </head>
-<body class="d-flex flex-column min-vh-100" id="body">
+<body class="d-flex flex-column min-vh-100" id="body" onload="redireccionar('registro.php')">
 <header>
     <nav class="navbar navbar-light" id="navbar-general">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Plataforma Educativa</a>
+      <div class="container-fluid" >
+        <a class="navbar-brand" href="index.html"
+        ><img src="https://img.icons8.com/wired/64/000000/students.png" />
+        Plataforma Educativa</a>
         <a class="navbar-brand" href="login.html">Iniciar Sesion</a>
         <a class="navbar-brand" href="registro.php">Registrarse</a>
         <a class="navbar-brand" href="perfil.html">Perfil</a>
         <form class="d-flex">
             <input type="search" class="form-control me-2"
               placeholder="Buscar" aria-label="Search">
-            <a href="resultados.html"></a>
+            <a href="resultados.html" target="_blank"></a>
             <button class="btn btn-outline-success" id="buscar-button">Buscar</button>
         </form>
       </div>
     </nav>
 </header>
-  <div class="container" id="container-login"> <br>
-    <form method="POST" action="#">
-    <form class="form-inline" role="form" id="form">
-        <div class="form-group" id="form-group-Usuario">
-          <label for="apellidoNombre">Apellido y Nombre: </label>
-          <input id="apellidoNombre" class="form-control" type="text" required>
-        </div><br>
-        <div class="form-group" id="form-group-ContraseÃ±a">
-          <label for="mail">Mail: </label>
-          <input id="mail" class="form-control" type="email" required>
-        </div><br>
-        <div class="form-group" id="form-group-ContraseÃ±a">
-            <label for="mensaje">Mensaje: </label>
-            <textarea name="mensaje" id="mensaje" class="form-control" rows="7" required></textarea>
-          </div><br>
-        <div class="form-group" id="form-group-button">
-          <button type="submit" class="btn btn-primary">Enviar Mensaje</button><br>
-        </div><br><br>
-      </form>
-    </div><br>
+<section>
+    <div class="container contenedorDatos" id="contenedor">
+    <div id="a">
+    <h3>Error: Usuario no se puede Registrar</h3>
+    <h3>Ya existe mail o DNI para otro usuario</h3>
+    <h4>Sera redireccionado nuevamente a la Pagina de Registro</h4>
+    </div>
+</div>
+</section>
+
+
+
     <footer class="mt-auto" id="footer">
       <ul class="footlist">
         <li><a href="https://www.linkedin.com"><img
@@ -75,5 +69,7 @@
         | Practicas profesionalizantes
       </span>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="js/funciones9.js"></script>
 </body>
 </html>

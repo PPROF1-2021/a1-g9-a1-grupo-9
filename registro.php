@@ -1,5 +1,11 @@
+<?php
+include("php/conexion.php");
+$query=$conexion->query("select * from paises");
+$paises = array();
+while($r=$query->fetch_object()){ $paises[]=$r; }
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,15 +17,16 @@
   href="img/students.png"
   type="image/x-icon"
 />
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <title>Registro</title>
 </head>
-<body class="d-flex flex-column min-vh-100" id="body" onload="cargarDatosFechas()" >
+<body class="d-flex flex-column min-vh-100" id="body" onload="cargarDatosFechas()">
 <header id="header">
   <nav class="navbar navbar-light" id="navbar-general">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html"><img src="https://img.icons8.com/wired/64/000000/students.png"/>Plataforma Educativa</a>
       <a class="navbar-brand" href="login.html">Iniciar Sesion</a>
-      <a class="navbar-brand" href="registro.html">Registrarse</a>
+      <a class="navbar-brand" href="registro.php">Registrarse</a>
       <a class="navbar-brand" href="perfil.html">Perfil</a>
       <form class="d-flex">
         <input type="search" class="form-control me-2" placeholder="Buscar" aria-label="Search">
@@ -35,31 +42,31 @@
   </div>
   <div class="container" id="container-registro"><br>
     <h2>Crear una cuenta</h2> <br>
-    <form class="form-inline needs-validation" role="form" id="form" method="get" action="" onsubmit="return validarRegistro()" novalidate>
+    <form class="form-inline needs-validation" role="form" id="form" method="POST" action="php/registro.php"  novalidate>
       <div class="form-group" id="form-group-Nombre">
         <label for="name">Nombre*</label>
-        <input id="name" class="form-control" type="text"  minlength="2" required>
+        <input id="name" name="nombre" class="form-control" type="text"  minlength="2" required>
         <div class="invalid-feedback">
           Ingresar Nombre!!
         </div>
      </div><br>   
       <div class="form-group" id="form-group-Apellido">
          <label for="lastname">Apellido*</label>
-         <input id="lastname" class="form-control" type="text"   minlength="2" required>
+         <input id="lastname" name="apellido" class="form-control" type="text"   minlength="2" required>
          <div class="invalid-feedback">
           Ingresar Apellido!!
         </div>
       </div><br>
      <div class="form-group" id="form-group-Email">
       <label for="email">Correo electronico</label>
-      <input id="email" class="form-control" type="email" placeholder="ejemplo@outlook.com" required>
+      <input id="email" name="correo" class="form-control" type="email" placeholder="ejemplo@outlook.com" required>
       <div class="invalid-feedback">
         Ingresar Correo!!
       </div>
    </div><br>
       <div class="form-group" id="form-group-contraseña">
          <label for="pwd">Contraseña*</label>
-         <input id="pwd" class="form-control" type="password" placeholder="Crea una contraseña" required>
+         <input id="pwd" class="form-control" name="contraseña" type="password" placeholder="Crea una contraseña" required>
          <div class="invalid-feedback">
           Ingresar Contraseña!!
         </div>
@@ -73,13 +80,11 @@
       </div><br>
       <div class="form-group" id="form-group-Pais">
         <label for="country">Pais de residencia</label>
-        <select class="form-control" size="1" aria-label=".form-select-1" required>
+        <select class="form-control" id="pais" name="pais" size="1" aria-label=".form-select-1" required>
           <option selected disabled value="">Pais</option>
-          <option value="1">Argentina</option>
-          <option value="2">Brasil</option>
-          <option value="3">Chile</option>
-          <option value="4">Colombia</option>
-          <option value="5">Mexico</option>
+          <?php foreach($paises as $p):?>
+            <option value="<?php echo $p->Codigo; ?>"><?php echo $p->Descripcion; ?></option>
+          <?php endforeach; ?>
         </select>
         <div class="invalid-feedback">
           Seleccionar Pais
@@ -87,13 +92,8 @@
         </div><br>
       <div class="form-group" id="form-group-Provincia">
           <label for="province">Provincia</label>
-          <select class="form-control" size="1" aria-label=".form-select-1" required>
+          <select class="form-control" id="provincia" name="provincia" size="1" aria-label=".form-select-1" required>
             <option selected disabled value="">Provincia</option>
-            <option value="1">Cordoba</option>
-            <option value="2">Neuquen</option>
-            <option value="3">La Rioja</option>
-            <option value="4">La Pampa</option>
-            <option value="5">San Juan</option>
           </select>
           <div class="invalid-feedback">
             Seleccionar Provincia
@@ -101,13 +101,8 @@
       </div><br>
       <div class="form-group" id="form-group-Localidad">
         <label for="province">Localidad</label>
-        <select class="form-control" size="1" aria-label=".form-select-1" required>
+        <select class="form-control" id="localidad" name="localidad" size="1" aria-label=".form-select-1" required>
           <option selected disabled value="">Localidad</option>
-          <option value="1">Alta Gracia</option>
-          <option value="2">Villa Maria</option>
-          <option value="3">Carlos Paz</option>
-          <option value="4">Bell vile</option>
-          <option value="5">Serrano</option>
         </select>
         <div class="invalid-feedback">
           Seleccionar Localidad
@@ -115,30 +110,31 @@
     </div><br>
      <div class="form-group" id="form-group-DNI">
       <label for="doc">N° de documento*</label>
-      <input id="doc" class="form-control" type="number" min="0" required>
+      <input id="doc" name="dni" class="form-control" type="number" min="0" required>
       <div class="invalid-feedback">
         Ingresar N° de documento
       </div>
    </div><br>
    <div class="form-group" id="form-group-Genero">
     <label for="gender">Genero</label>
-    <label class="form-check-label" for="flexRadioDefault1" style="padding-left: 2rem;"><input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked> Masculino </label>
-    <label class="form-check-label" for="flexRadioDefault2" style="padding-left: 0.5rem;"><input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"> Femenino </label>
+    <label class="form-check-label" for="flexRadioDefault1" style="padding-left: 2rem;"><input class="form-check-input" name="sexo" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="M" checked> Masculino </label>
+    <label class="form-check-label" for="flexRadioDefault2" style="padding-left: 0.5rem;"><input class="form-check-input" name="sexo" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="F"> Femenino </label>
   </div><br>
   <div class="form-inline" role="form" id="form-Fecha">
     <label for="date">Fecha de Nacimiento* </label>
-    <select class="form-group form-control-sm" size="1" id="dia" aria-label=".form-select-1">
+    <!--<input class="form-group form-control-sm" type="date" id="date" name="dia">-->
+    <select class="form-group form-control-sm" size="1" id="dia" name="dia"  aria-label=".form-select-1">
     </select>
 
-    <select class="form-group form-control-sm" id="mes" size="1" aria-label=".form-select-1" onchange="cargarDias()">
+    <select class="form-group form-control-sm" id="mes" name="mes" size="1" aria-label=".form-select-1" onchange="cargarDias()">
 
     </select>
-    <select class="form-group form-control-sm" size="1" id="año" aria-label=".form-select-1">
+    <select class="form-group form-control-sm" size="1" id="año" name="año" aria-label=".form-select-1">
     </select>
-   
+    
   </div><br>
   <div class="form-group" id="form-group-button">
-  <button type="submit" value="submit"  class="btn btn-primary" id="registro- button" onclick="validarRegistro()" onmouseover="cambiarBoton()" onmouseout="cambiarBoton2()">Crear</button><br>
+  <button type="submit" value="submit" name="registrar"  class="btn btn-primary" id="registro- button"  onmouseover="cambiarBoton()" onmouseout="cambiarBoton2()">Crear</button><br>
   </div>
   </form>
 </div><br>
@@ -170,5 +166,24 @@
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script src="js/funciones9.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#pais").change(function(){
+      $.get("php/provincias.php","pais="+$("#pais").val(), function(data){
+				$("#provincia").html(data);
+				//console.log(data);
+			});
+		});
+
+		$("#provincia").change(function(){   
+      console.log("hola")  
+			$.get("php/localidades.php","provincia="+$("#provincia").val(), function(data){
+				$("#localidad").html(data);
+				console.log(data);
+			});
+		});
+	});
+</script>
+
 </body>
 </html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       

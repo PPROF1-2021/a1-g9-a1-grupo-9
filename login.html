@@ -33,23 +33,23 @@
     </nav>
 </header>
   <div class="container" id="container-login"> <br>
-      <form class="form-inline needs-validation" role="form" id="form" method="post" action="#"  novalidate>
+      <form class="form-inline needs-validation" role="form" id="form" method="POST" action="php/login.php"  novalidate>
         <div class="form-group" id="form-group-Usuario">
           <label for="usuario">Usuario: </label>
-          <input id="usuario" class="form-control" type="text" required>
+          <input id="usuario" name="usuario" class="form-control" type="text" required>
           <div class="invalid-feedback">
             Ingresar Usuario!!
           </div>
         </div><br>
         <div class="form-group" id="form-group-Contraseña">
           <label for="clave">Contraseña: </label>
-          <input id="clave" class="form-control" type="password" required>
+          <input id="clave" name="contraseña" class="form-control" type="password" required>
           <div class="invalid-feedback">
             Ingresar Contraseña!!
           </div>
         </div><br>
         <div class="form-group" id="form-group-button">
-          <button type="submit" class="btn btn-primary" onclick="validarLog()">Iniciar sesion</button><br>
+          <button type="submit" class="btn btn-primary" name="login" onclick="validarLog()">Iniciar sesion</button><br>
         </div><br><br>
         <div id="registro">
           <div class="form-inline" id="form-button">

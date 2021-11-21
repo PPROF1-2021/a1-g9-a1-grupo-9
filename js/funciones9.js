@@ -127,10 +127,10 @@ function validarRegistro(){
         if (!form.checkValidity()) {
           event.preventDefault()
           event.stopPropagation()
-        }else if(validar()==true){
+        }/*else if(validar()==true){
          
           mostrarDatos(event)
-        }
+        }*/
 
         form.classList.add('was-validated')
       }, false)

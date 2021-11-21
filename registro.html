@@ -19,7 +19,7 @@
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html"><img src="https://img.icons8.com/wired/64/000000/students.png"/>Plataforma Educativa</a>
       <a class="navbar-brand" href="login.html">Iniciar Sesion</a>
-      <a class="navbar-brand" href="registro.html">Registrarse</a>
+      <a class="navbar-brand" href="registro.php">Registrarse</a>
       <a class="navbar-brand" href="perfil.html">Perfil</a>
       <form class="d-flex">
         <input type="search" class="form-control me-2" placeholder="Buscar" aria-label="Search">
@@ -35,31 +35,31 @@
   </div>
   <div class="container" id="container-registro"><br>
     <h2>Crear una cuenta</h2> <br>
-    <form class="form-inline needs-validation" role="form" id="form" method="get" action="" onsubmit="return validarRegistro()" novalidate>
+    <form class="form-inline needs-validation" role="form" id="form" method="POST" action="php/registro.php" onsubmit="return validarRegistro2()" novalidate>
       <div class="form-group" id="form-group-Nombre">
         <label for="name">Nombre*</label>
-        <input id="name" class="form-control" type="text"  minlength="2" required>
+        <input id="name" name="nombre" class="form-control" type="text"  minlength="2" required>
         <div class="invalid-feedback">
           Ingresar Nombre!!
         </div>
      </div><br>   
       <div class="form-group" id="form-group-Apellido">
          <label for="lastname">Apellido*</label>
-         <input id="lastname" class="form-control" type="text"   minlength="2" required>
+         <input id="lastname" name="apellido" class="form-control" type="text"   minlength="2" required>
          <div class="invalid-feedback">
           Ingresar Apellido!!
         </div>
       </div><br>
      <div class="form-group" id="form-group-Email">
       <label for="email">Correo electronico</label>
-      <input id="email" class="form-control" type="email" placeholder="ejemplo@outlook.com" required>
+      <input id="email" name="correo" class="form-control" type="email" placeholder="ejemplo@outlook.com" required>
       <div class="invalid-feedback">
         Ingresar Correo!!
       </div>
    </div><br>
       <div class="form-group" id="form-group-contraseña">
          <label for="pwd">Contraseña*</label>
-         <input id="pwd" class="form-control" type="password" placeholder="Crea una contraseña" required>
+         <input id="pwd" class="form-control" name="contraseña" type="password" placeholder="Crea una contraseña" required>
          <div class="invalid-feedback">
           Ingresar Contraseña!!
         </div>
@@ -101,7 +101,7 @@
       </div><br>
       <div class="form-group" id="form-group-Localidad">
         <label for="province">Localidad</label>
-        <select class="form-control" size="1" aria-label=".form-select-1" required>
+        <select class="form-control" name="localidad" size="1" aria-label=".form-select-1" required>
           <option selected disabled value="">Localidad</option>
           <option value="1">Alta Gracia</option>
           <option value="2">Villa Maria</option>
@@ -115,30 +115,30 @@
     </div><br>
      <div class="form-group" id="form-group-DNI">
       <label for="doc">N° de documento*</label>
-      <input id="doc" class="form-control" type="number" min="0" required>
+      <input id="doc" name="dni" class="form-control" type="number" min="0" required>
       <div class="invalid-feedback">
         Ingresar N° de documento
       </div>
    </div><br>
    <div class="form-group" id="form-group-Genero">
     <label for="gender">Genero</label>
-    <label class="form-check-label" for="flexRadioDefault1" style="padding-left: 2rem;"><input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked> Masculino </label>
-    <label class="form-check-label" for="flexRadioDefault2" style="padding-left: 0.5rem;"><input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"> Femenino </label>
+    <label class="form-check-label" for="flexRadioDefault1" style="padding-left: 2rem;"><input class="form-check-input" name="sexo" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="M" checked> Masculino </label>
+    <label class="form-check-label" for="flexRadioDefault2" style="padding-left: 0.5rem;"><input class="form-check-input" name="sexo" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="F"> Femenino </label>
   </div><br>
   <div class="form-inline" role="form" id="form-Fecha">
     <label for="date">Fecha de Nacimiento* </label>
-    <select class="form-group form-control-sm" size="1" id="dia" aria-label=".form-select-1">
+    <select class="form-group form-control-sm" size="1" id="dia" name="dia" aria-label=".form-select-1">
     </select>
 
-    <select class="form-group form-control-sm" id="mes" size="1" aria-label=".form-select-1" onchange="cargarDias()">
+    <select class="form-group form-control-sm" id="mes" name="mes" size="1" aria-label=".form-select-1" onchange="cargarDias()">
 
     </select>
-    <select class="form-group form-control-sm" size="1" id="año" aria-label=".form-select-1">
+    <select class="form-group form-control-sm" size="1" id="año" name="año " aria-label=".form-select-1">
     </select>
    
   </div><br>
   <div class="form-group" id="form-group-button">
-  <button type="submit" value="submit"  class="btn btn-primary" id="registro- button" onclick="validarRegistro()" onmouseover="cambiarBoton()" onmouseout="cambiarBoton2()">Crear</button><br>
+  <button type="submit" value="submit" name="registrar"  class="btn btn-primary" id="registro- button" onclick="validarRegistro()" onmouseover="cambiarBoton()" onmouseout="cambiarBoton2()">Crear</button><br>
   </div>
   </form>
 </div><br>

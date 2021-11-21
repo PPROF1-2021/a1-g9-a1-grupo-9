@@ -1,3 +1,9 @@
+
+
+
+
+
+
 <?php
 include("conexion.php");
 
@@ -20,10 +26,11 @@ if(isset($_POST["login"])){
    # </script>";
         header("Location: ../perfil.html");
     }else{
-        echo "<script>
+        header("Location: ../errorlogin.html");
+        /*echo "<script>
                     alert('Usuario o password incorrecto');
                     window.location='../login.html';
-                </script>";
+                </script>";*/
     }
 }
 ?>

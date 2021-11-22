@@ -259,7 +259,7 @@
   width: 500px;
   
   padding: 2rem 3rem;
-  background-color: white;
+  background-color: rgb(59, 54, 54);
   margin-bottom: 5rem;
   margin-top: 5rem;
   border: 2px solid;
@@ -366,4 +366,13 @@ footer > ul > li > a:hover {
 
 .encabezado-datos {
     font-size: 20px;
+}
+
+.ocultar {
+  display: none;
+}
+
+.mostrar {
+  display: block;
+  color: red;
 }

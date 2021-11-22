@@ -40,10 +40,7 @@
 
 			$resultadousuario=$conexion->query($sqlusuario);
 			if($resultadousuario>0){
-				echo "<script>
-						alert('Registro exitoso');
-						window.location='../index.html';
-					</script>";
+				header("Location: ../registroexitoso.html");
 			}else{
 				echo "<script>
 						alert('Error al registrarse');

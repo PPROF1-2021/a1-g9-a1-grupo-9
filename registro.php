@@ -1,6 +1,6 @@
 <?php
 include("php/conexion.php");
-$query=$conexion->query("select * from paises");
+$query=$conexion->query("select * from paises order by Descripcion");
 $paises = array();
 while($r=$query->fetch_object()){ $paises[]=$r; }
 ?>
@@ -75,7 +75,7 @@ while($r=$query->fetch_object()){ $paises[]=$r; }
           <label for="pwd1">Confirmar contraseña*</label>
           <input id="pwd1" class="form-control" type="password"  placeholder="Ingrese nuevamente la contraseña" required>
           <div class="invalid-feedback">
-            Ingresar Usuario!!
+            Ingresar Contraseña!!
           </div>
       </div><br>
       <div class="form-group" id="form-group-Pais">

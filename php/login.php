@@ -24,7 +24,7 @@ if(isset($_POST["login"])){
        # echo "<script>
        # window.location='../perfil.html';
    # </script>";
-        header("Location: ../perfil.html");
+        header("Location: ../resultados.php");
     }else{
         header("Location: ../errorlogin.html");
         /*echo "<script>

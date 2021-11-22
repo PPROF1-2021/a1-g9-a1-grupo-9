@@ -195,6 +195,18 @@ function redireccionar(pagina){
   }, 4500);
 }
 
+function validarPassword(){
+  let p1=document.getElementById("pwd").value;
+  let p2=document.getElementById("pwd1").value;
+  if(p1!=p2){
+    document.getElementById("error").classList.add("mostrar");
+    return false;
+  }else{
+    document.getElementById("error").classList.remove("mostrar");
+    return true;
+  }
+}
+
 /*
 function validarLog(){
   'use strict'
